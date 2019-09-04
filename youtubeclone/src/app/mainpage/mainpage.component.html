@@ -1,0 +1,31 @@
+<nav class="navbar redd" ><h1>YOUTUBECLONE</h1>
+  <input type="text" placeholder="search" #myinput>
+<p></p>
+<button (click)="searchevent(myinput.value)">SEARCH</button>
+<nav id="lefjao">
+<a routerLink="favoritesn">FAVORITES</a>  
+</nav>
+</nav>
+
+<p></p>
+<button (click)="searchevent(myinput.value)">SEARCH</button>
+
+
+
+    
+   <ul *ngFor= "let kkkm of hjh">
+        <li>  <div class="vcont">
+            <img class="bigboy" src="{{kkkm.snippet.thumbnails.default.url}}" alt="img">
+          <h2>  {{kkkm.id.videoId}} </h2> 
+            <button (click)="add2favorite(kkkm.id.videoId)">ADD_TO_FAVORITE</button>
+            <button (click)="onselect(kkkm)">PLAY</button>
+
+            </div>
+        </li>
+    
+        </ul> 
+
+
+        <iframe width="420" height="345" [src]="url+video_id|safe">
+        </iframe>
+        

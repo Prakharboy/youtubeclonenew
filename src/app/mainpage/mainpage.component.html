@@ -1,0 +1,42 @@
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#"><h1>YOUTUBECLONE</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button (click)="gotofavorites()" class="btn btn-warning">FAVORITES</button>
+      </li>   
+    </ul>
+  </div> 
+  <form class="form-inline" action="/action_page.php">
+    <input type="text" class="form-control mr-sm-2" placeholder="search" #myinput>
+    <button (click)="searchevent(myinput.value)" class="btn btn-warning">SEARCH</button>
+  </form> 
+</nav>
+
+
+<p></p>
+
+
+
+<div>
+
+    
+   <dl *ngFor= "let kkkm of hjh">
+          <div id="subbox">
+            <img class="bigboy" src="{{kkkm.snippet.thumbnails.default.url}}" alt="img">
+          <h2>  {{kkkm.snippet.title}} </h2> 
+            <button (click)="add2favorite(kkkm)" class="btn btn-success">ADD TO FAVORITE</button>&nbsp;
+            <button (click)="onselect(kkkm)" class="btn btn-success">PLAY</button>
+
+            </div>
+        
+    
+        </dl> 
+
+</div>
+        
+        

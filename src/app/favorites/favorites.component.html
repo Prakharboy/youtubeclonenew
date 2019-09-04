@@ -1,0 +1,22 @@
+<h1>favorites list is</h1>
+
+<dl *ngFor="let oppo of verygood.greatcar">
+
+<div id="subbox">
+    
+    <img class="goodimage" src="{{oppo.thumbnails.default.url}}" alt="img">
+    {{oppo.title}}
+    <p></p>
+    <h2>{{oppo.comment}}</h2>
+   <p></p> <button (click)="deleteplease(oppo.id)" class="btn btn-danger">DELETE</button> <p></p>
+     
+    
+    <input type="text" #myinput placeholder="add/patch comment">
+    <p></p>
+    <button (click)="adddcomment(oppo,myinput.value)" class="btn btn-warning">addcomment</button> &nbsp;
+    <button (click)="padcoment(oppo,myinput.value)" class="btn btn-warning">patchcomment</button>
+
+</div> 
+
+</dl> 
+
